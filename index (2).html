@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[ Theme Color ]-->
+<meta content='#204ecf' name='theme-color'/>
+<meta content='#204ecf' name='msapplication-navbutton-color'/>
+<meta content='#204ecf' name='apple-mobile-web-app-status-bar-style'/>
+<meta content='true' name='apple-mobile-web-app-capable'/>
+<!--[ Favicon ]-->
+<meta content='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w144-h144-p-k-no-nu' name='msapplication-TileImage'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w57-h57-p-k-no-nu' rel='apple-touch-icon' sizes='57x57'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w60-h60-p-k-no-nu' rel='apple-touch-icon' sizes='60x60'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w72-h72-p-k-no-nu' rel='apple-touch-icon' sizes='72x72'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w76-h76-p-k-no-nu' rel='apple-touch-icon' sizes='76x76'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w114-h114-p-k-no-nu' rel='apple-touch-icon' sizes='114x114'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w120-h120-p-k-no-nu' rel='apple-touch-icon' sizes='120x120'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w144-h144-p-k-no-nu' rel='apple-touch-icon' sizes='144x144'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w152-h152-p-k-no-nu' rel='apple-touch-icon' sizes='152x152'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w180-h180-p-k-no-nu' rel='apple-touch-icon' sizes='180x180'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w16-h16-p-k-no-nu' rel='icon' sizes='16x16' type='image/png'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w32-h32-p-k-no-nu' rel='icon' sizes='32x32' type='image/png'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w96-h96-p-k-no-nu' rel='icon' sizes='96x96' type='image/png'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w192-h192-p-k-no-nu' rel='icon' sizes='192x192' type='image/png'/>
+<title>Lantro UI - v2.0</title>
+
+<style>
+:root{--contentL:#e6e6e6;--bg:#fff;--text:#111;--muted:#6b7280;--accent:#6c5ce7;--card:#ffff}
+.dark{--contentL:rgba(255,255,255,.15);--bg:#0f0f11;--text:#fff;--muted:#9ca3af;--accent:#8b7cf6;--card:#1a1a1d}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);transition:.3s}
+.nav{display:flex;border:1px solid var(--contentL);justify-content:space-between;align-items:center;padding:20px 8%}
+.logo{font-weight:700;font-size:20px}
+.nav a{color:var(--text);margin-left:20px;text-decoration:none;font-size:14px}
+.toggle{margin-left:8px;cursor:pointer;padding:6px 12px;border-radius:6px;font-size:13px}.toggle svg.icon{stroke:var(--text);vertical-align:middle;width:18px;height:18px;position:relative;stroke-width:1;fill:none;stroke-linecap: round;margin-bottom:5px}
+.hero-wrap{display:grid;border-bottom:3px dotted var(--contentL);grid-template-columns:1fr 1fr;align-items:center;padding:80px 8%;gap:40px}
+.hero-left h1{font-size:48px;font-weight:700}
+.hero-left span{color:var(--accent)}
+.hero-left p{margin-top:20px;color:var(--muted);max-width:500px}
+.mac-window{background:var(--card);border:1px solid var(--contentL);border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.1)}
+.mac-bar{display:flex;gap:8px;padding:10px;border-bottom:1px solid var(--contentL)}
+.dot{width:10px;height:10px;border-radius:50%}
+.red{background:#ff5f57}
+.yellow{background:#febc2e}
+.green{background:#28c840}
+.mac-body img{width:100%;display:block}
+@media(max-width:900px){.hero-wrap{grid-template-columns:1fr}
+.hero-right{margin-top:30px}}
+.hero-wrap h1{font-size:48px;font-weight:700}
+.hero-wrap span{color:var(--accent)}
+.hero-wrap p{margin-top:20px;color:var(--muted);max-width:500px}
+.btn{padding:12px 22px;border-radius:30px;border:none;cursor:pointer;margin-top:25px}
+.btn-primary{background:var(--accent);color:#fff}
+.showcase{padding:60px 8%;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+.card{background:var(--card);border-radius:5px;border:1px solid var(--contentL);overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-6px)}
+.thumb img{width:100%}
+.icon{fill:none;stroke-width:1;stroke-linecap:round}.svg-c{stroke:var(--accent)}
+.badge{position:absolute;background:var(--accent);color:#fff;font-size:12px;padding:5px 10px;border-radius:6px;margin:10px}
+.features{padding:60px 8%}
+.features h2{margin-bottom:30px}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.fcard{background:var(--card);border:1px solid var(--contentL);padding:20px;border-radius:5px;transition:.2s}
+.fcard:hover{transform:translateY(-4px)}
+.icon{width:28px;height:28px;stroke:var(--text);margin-bottom:10px;stroke-width:1}
+.fcard h4{margin:8px 0}
+.fcard p{font-size:13px;color:var(--muted)}
+.footer{text-align:center;padding:30px;color:var(--muted);border-top:3px dotted var(--contentL)}
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+  <div class="logo">Lantro UI</div>
+  <div>
+    <a href="https://the-lantro-ui.blogspot.com/search/label/Documentation" target="_blank">Documentation</a>
+    <a href="https://www.coshix.in" target="_blank">Blog</a>
+    <span class="toggle" onclick="t()"><svg class='icon' viewBox='0 0 24 24'><path d='M2.03009 12.42C2.39009 17.57 6.76009 21.76 11.9901 21.99C15.6801 22.15 18.9801 20.43 20.9601 17.72C21.7801 16.61 21.3401 15.87 19.9701 16.12C19.3001 16.24 18.6101 16.29 17.8901 16.26C13.0001 16.06 9.00009 11.97 8.98009 7.13996C8.97009 5.83996 9.24009 4.60996 9.73009 3.48996C10.2701 2.24996 9.62009 1.65996 8.37009 2.18996C4.41009 3.85996 1.70009 7.84996 2.03009 12.42Z'></path></svg></span></div>
+</div>
+
+<div class="hero-wrap">
+
+  <div class="hero-left">
+    <h1>Get <span>fast</span> Blogger UI</h1>
+    <p>Modern, lightweight, and customizable Blogger template.</p>
+
+    <a href="#"><button class="btn btn-primary">Download</button></a>
+    <a href="https://the-lantro-ui.blogspot.com">
+      <button class="btn">Live Demo</button>
+    </a>
+  </div>
+
+  <div class="hero-right">
+    <div class="mac-window">
+
+      <div class="mac-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+
+      <div class="mac-body">
+        <img src="https://cdn.coshix.in/Images/lui-ss.webp" alt="Preview">
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- FEATURES -->
+<div class="features">
+<h2>Features —</h2>
+
+<div class="fgrid">
+
+<div class="fcard">
+<svg viewBox="0 0 24 24" class="icon"><path d="M2 4.5C2 3 3 2 4.5 2h3C9 2 10 3 10 4.5V18c0 1.08-.44 2.07-1.14 2.79l-.04.04c-.09.09-.19.18-.28.25-.3.26-.64.46-.99.6-.11.05-.22.09-.33.13-.39.13-.81.19-1.22.19-.27 0-.54-.03-.8-.08-.13-.03-.26-.06-.39-.1-.16-.05-.31-.1-.46-.17-.28-.14-.55-.3-.8-.49l-.01-.01c-.13-.1-.25-.2-.36-.32-.11-.12-.22-.24-.33-.37-.19-.25-.35-.52-.49-.8-.06-.14-.11-.29-.16-.44-.04-.13-.07-.26-.1-.39-.05-.26-.08-.53-.08-.8V8.57"/><path d="M22 16.5V19.5C22 21 21 22 19.5 22H6"/><path d="M4.81 21.82c-.6-.18-1.17-.51-1.64-.99-.48-.47-.81-1.04-.99-1.64"/><path d="M18.37 11.29 15.66 14 8.86 20.79C9.56 20.07 10 19.08 10 18V8.34l2.71-2.71c1.06-1.06 2.48-1.06 3.54 0l2.12 2.12c1.06 1.06 1.06 2.48 0 3.54Z" class="svg-c"/><path d="M6 19a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/></svg>
+<h4>Advanced Customisation</h4>
+<p>Most of things are now customizable easily.</p>
+</div>
+
+<div class="fcard">
+<svg viewBox="0 0 24 24" class="icon"><path d="M14.82 7.02V3.52c0-1.68-.91-2.02-2.02-.76L5.23 11.36c-.93 1.05-.54 1.92.87 1.92h3.09v7.2c0 1.68.91 2.02 2.02.76l7.57-8.6c.93-1.05.54-1.92-.87-1.92h-3.09"/></svg>
+<h4>Fast Loading</h4>
+<p>We ensured 90+ page speed through this theme.</p>
+</div>
+
+<div class="fcard">
+<svg viewBox="0 0 24 24" class="icon"><path d="M3.96 3.32C2.6 4.43 2 6.27 2 9v6c0 5 2 7 7 7h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9"/><path d="M12 2v20M2 12h20" class="svg-c"/></svg>
+<h4>Responsive</h4>
+<p>Show very well in every device especially in mobile devices.</p>
+</div>
+
+<div class="fcard">
+<svg class="icon" fill="none" viewBox="0 0 24 24" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+<h4>SEO optimized</h4>
+<p>Used required meta tags and everything for SEO.</p>
+</div>
+
+<div class="fcard">
+<svg viewBox="0 0 24 24" class="icon"><path d="M9 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2"/><path d="M2 12.97V15c0 5 2 7 7 7h6c5 0 7-2 7-7v-5"/><path d="M13 2H9C4 2 2 4 2 9"/><path d="M16 4.99 17.46 6.45 21.36 2.55" class="svg-c"/><path d="M2.67 18.95 7.6 15.64c.79-.53 1.93-.47 2.64.14l.33.29c.78.67 2.04.67 2.82 0l4.16-3.57c.78-.67 2.04-.67 2.82 0L22 13.9"/></svg>
+<h4>Ad optimized</h4>
+<p>Added several Ad slots to imoprove your earning.</p>
+</div>
+
+<div class="fcard">
+<svg viewBox="0 0 24 24" class="icon"><path d="M13.67 7.51c-.5-.15-1.05-.25-1.67-.25a5 5 0 1 0 4.16 2.22"/><path d="M14.38 7.65 12.72 5.74M14.38 7.65 12.44 9.07" class="svg-c"/><path d="M2 14v1c0 5 2 7 7 7h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9"/></svg>
+<h4>Lazy Load</h4>
+<p>Added lazy load to improve your page speed.</p>
+</div>
+
+<div class="fcard">
+<svg viewBox="0 0 24 24" class="icon"><path d="M8.38 12 10.79 14.42 15.62 9.58" class="svg-c"/><path d="M4.24 6.2c0-1.06.87-1.93 1.93-1.93H7.9c.4 0 .96-.21 1.26-.46l1.58-1.35c.7-.59 1.83-.59 2.51 0l1.58 1.35c.3.25.87.46 1.27.46h1.7c1.06 0 1.93.87 1.93 1.93v1.7c0 .4.21.96.46 1.26l1.35 1.58c.59.7.59 1.83 0 2.51l-1.35 1.58c-.25.3-.46.87-.46 1.27v1.7c0 1.06-.87 1.93-1.93 1.93h-1.7c-.4 0-.96.21-1.26.46l-1.58 1.35c-.7.59-1.83.59-2.51 0l-1.58-1.35c-.3-.25-.87-.46-1.26-.46H6.17c-1.06 0-1.93-.87-1.93-1.93v-1.7c0-.4-.2-.97-.45-1.26l-1.35-1.59c-.58-.69-.58-1.81 0-2.5l.56-.66"/></svg>
+<h4>Clean code</h4>
+<p>Minified CSS &amp; JS and well managed codes.</p>
+</div>
+
+<div class="fcard">
+<svg viewBox="0 0 24 24" class="icon"><path d="M2 12.98V15c0 5 2 7 7 7h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9"/><path d="M15.75 9h-7.5M15.75 15h-7.5" class="svg-c"/></svg>
+<h4>Well documented</h4>
+<p>Well made documentation including post styles, extra setup etc.</p>
+</div>
+
+<div class="fcard">
+<svg viewBox="0 0 24 24" class="icon"><path d="M9 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7Z"/><path d="M10 2v20M10 12h12" class="svg-c c-2"/></svg>
+<h4>RTL support</h4>
+<p>Supports RTL languages and its layout.</p>
+</div>
+
+<div class="fcard">
+<svg viewBox="0 0 24 24" class="icon"><path d="M8 12h8M12 16V8" class="svg-c"/><path d="M9 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7Z"/></svg>
+<h4>More</h4>
+<p>Many extra advanced features added for you.</p>
+</div>
+
+</div>
+</div>
+
+<div class="footer">© 2026 Lantro UI</div>
+
+<script>
+function t(){document.body.classList.toggle("dark");localStorage.setItem("theme",document.body.classList.contains("dark")?"dark":"light")}
+!function(){localStorage.getItem("theme")==="dark"&&document.body.classList.add("dark")}();
+</script>
+
+</body>
+</html>
