@@ -28,7 +28,7 @@
 <style>
 :root{--contentL:#e6e6e6;--bg:#fff;--text:#111;--muted:#6b7280;--accent:#6c5ce7;--card:#ffff}
 .dark{--contentL:rgba(255,255,255,.15);--bg:#0f0f11;--text:#fff;--muted:#9ca3af;--accent:#8b7cf6;--card:#1a1a1d}
-*{margin:0;padding:0;box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
 body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);transition:.3s}
 .nav{display:flex;border-bottom:1px solid var(--contentL);justify-content:space-between;align-items:center;padding:16px 6%;gap:16px;flex-wrap:wrap}
 .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;flex-wrap:nowrap}
@@ -36,7 +36,7 @@ body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);trans
 .logo-text{color:var(--text);letter-spacing:-0.3px;white-space:nowrap}
 .version-badge{background:var(--accent);color:#fff;font-size:0.7rem;font-weight:500;padding:3px 10px;border-radius:40px;margin-left:4px;white-space:nowrap}
 .menu{display:flex;gap:4px;vertical-align:middle;align-items:center;flex-wrap:nowrap}
-.nav-links{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center}
+.nav-links{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content: center}
 .nav a{color:var(--text);margin-left:0;text-decoration:none;font-size:14px;padding:4px 6px}
 .toggle{margin-left:0;cursor:pointer;padding:6px 10px;border-radius:6px;display:inline-flex;align-items:center}
 .toggle svg.icon{stroke:var(--text);width:18px;height:18px;stroke-width:1;fill:none;stroke-linecap:round}
@@ -71,9 +71,46 @@ body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);trans
 .fcard p{font-size:13px;color:var(--muted)}
 .footer{text-align:center;padding:30px;color:var(--muted);border-top:3px dotted var(--contentL)}
 @media (max-width: 580px) {
-  .nav { justify-content: center; }
   .logo { flex-wrap: wrap; justify-content: center; }
   .version-badge { margin-left: 0; }
+}
+
+/* === MOBILE MENU === */
+.hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:6px}
+.hamburger span{width:22px;height:1.5px;background:var(--text);border-radius:2px;transition:.3s}
+
+@media(max-width:768px){
+  .menu{position:relative;flex-direction: row-reverse}
+  .hamburger{display:flex}
+
+  .menu a{display:none} /* hide normal menu */
+
+  .nav-links{
+    position:absolute;
+    top:60px;
+    right:0;
+    background:var(--card);
+    border:1px solid var(--contentL);
+    border-radius:10px;
+    padding:12px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    opacity:0;
+    transform:translateY(-10px);
+    pointer-events:none;
+    transition:.25s ease;
+  }
+
+  .nav-links.show{
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:auto;
+  }
+
+  .nav-links a{
+    display:block;
+  }
 }
 </style>
 </head>
@@ -87,9 +124,21 @@ body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);trans
     <span class="version-badge">v2.0</span>
   </div>
   <div class="menu">
-    <a href="https://the-lantro-ui.blogspot.com/search/label/Documentation" target="_blank">Documentation</a>
-    <a href="https://www.coshix.in" target="_blank">Blog</a>
-    <span class="toggle" onclick="t()"><svg class='icon' viewBox='0 0 24 24'><path d='M2.03009 12.42C2.39009 17.57 6.76009 21.76 11.9901 21.99C15.6801 22.15 18.9801 20.43 20.9601 17.72C21.7801 16.61 21.3401 15.87 19.9701 16.12C19.3001 16.24 18.6101 16.29 17.8901 16.26C13.0001 16.06 9.00009 11.97 8.98009 7.13996C8.97009 5.83996 9.24009 4.60996 9.73009 3.48996C10.2701 2.24996 9.62009 1.65996 8.37009 2.18996C4.41009 3.85996 1.70009 7.84996 2.03009 12.42Z'></path></svg></span></div>
+  
+  <div class="nav-links" id="navLinks">
+    <a href="...">Documentation</a>
+    <a href="...">Blog</a>
+  </div>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <span class="toggle" onclick="t()"><svg class='icon' viewBox='0 0 24 24'><path d='M2.03009 12.42C2.39009 17.57 6.76009 21.76 11.9901 21.99C15.6801 22.15 18.9801 20.43 20.9601 17.72C21.7801 16.61 21.3401 15.87 19.9701 16.12C19.3001 16.24 18.6101 16.29 17.8901 16.26C13.0001 16.06 9.00009 11.97 8.98009 7.13996C8.97009 5.83996 9.24009 4.60996 9.73009 3.48996C10.2701 2.24996 9.62009 1.65996 8.37009 2.18996C4.41009 3.85996 1.70009 7.84996 2.03009 12.42Z'></path></svg></span>
+
+</div>
 </div>
 
 <div class="hero-wrap">
@@ -196,6 +245,7 @@ body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);trans
 <script>
 function t(){document.body.classList.toggle("dark");localStorage.setItem("theme",document.body.classList.contains("dark")?"dark":"light")}
 !function(){localStorage.getItem("theme")==="dark"&&document.body.classList.add("dark")}();
+const nav=document.getElementById("navLinks");function toggleMenu(){nav.classList.toggle("show")}document.addEventListener("click",function(e){nav.contains(e.target)||e.target.closest(".hamburger")||nav.classList.remove("show")});nav.querySelectorAll("a").forEach(function(l){l.addEventListener("click",function(){nav.classList.remove("show")})});
 </script>
 
 </body>
