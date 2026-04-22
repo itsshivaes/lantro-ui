@@ -85,12 +85,18 @@ body{font-family:'Inter', sans-serif;background:var(--bg);color:var(--text);tran
 .fcard p{font-size:13px;color:var(--muted)}
 .footer{text-align:center;padding:30px;color:var(--muted);border-top:3px dotted var(--contentL)}
 </style>
-
-<script>/*@fineshopdesign/lazy.js*/ window.lazy=window.lazy||new Promise(e=>{const t="IS_LAZIED",n="true",o=["scroll","click"],i=["keydown","mouseover","touchmove","touchstart"],r=o.concat(i);function a(){try{return localStorage.getItem(t)===n}catch(e){return!0}}function l(e=!0){try{e?localStorage.setItem(t,n):localStorage.removeItem(t)}catch(e){}}function d(t){l(!0),e({type:t.type.toLowerCase()}),r.forEach(e=>window.removeEventListener(e,d))}if(a())e({type:"local"});else if(0!==document.documentElement.scrollTop||document.body&&0!==document.body.scrollTop)d({type:"scroll"});else{const e=()=>{window.removeEventListener("load",e),i.forEach(e=>window.addEventListener(e,d))};window.addEventListener("load",e),o.forEach(e=>window.addEventListener(e,d))}});</script>
-
+  
 <!--[ Font ]-->
-<script>lazy.then(function(){var l1=document.createElement("link");l1.rel="preconnect";l1.href="https://fonts.googleapis.com";document.head.appendChild(l1);var l2=document.createElement("link");l2.rel="preconnect";l2.href="https://fonts.gstatic.com";l2.crossOrigin="anonymous";document.head.appendChild(l2);var s=document.createElement("link");s.rel="stylesheet";s.href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap";document.head.appendChild(s)})/*]]>*/</script>
-<script>lazy.then(function(){var l1=document.createElement("link");l1.rel="preconnect";l1.href="https://fonts.googleapis.com";document.head.appendChild(l1);var l2=document.createElement("link");l2.rel="preconnect";l2.href="https://fonts.gstatic.com";l2.crossOrigin="anonymous";document.head.appendChild(l2);var s=document.createElement("link");s.rel="stylesheet";s.href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap";document.head.appendChild(s)})</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=optional"
+onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=optional">
+</noscript>
+  
 </head>
 
 <body>
@@ -125,7 +131,7 @@ body{font-family:'Inter', sans-serif;background:var(--bg);color:var(--text);tran
       </div>
 
       <div class="mac-body">
-        <img src="https://cdn.coshix.in/Images/lui-ss.webp" alt="Preview">
+        <img width="2400" height="2400" src="https://cdn.coshix.in/Images/lui-ss.webp" alt="Preview">
       </div>
 
     </div>
