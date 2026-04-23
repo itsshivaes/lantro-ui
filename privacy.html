@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- THEME COLOR -->
+<meta content='#204ecf' name='theme-color'/>
+<meta content='#204ecf' name='msapplication-navbutton-color'/>
+<meta content='#204ecf' name='apple-mobile-web-app-status-bar-style'/>
+<meta content='true' name='apple-mobile-web-app-capable'/>
+<!-- FAVICON -->
+<meta content='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w144-h144-p-k-no-nu' name='msapplication-TileImage'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w57-h57-p-k-no-nu' rel='apple-touch-icon' sizes='57x57'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w60-h60-p-k-no-nu' rel='apple-touch-icon' sizes='60x60'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w72-h72-p-k-no-nu' rel='apple-touch-icon' sizes='72x72'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w76-h76-p-k-no-nu' rel='apple-touch-icon' sizes='76x76'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w114-h114-p-k-no-nu' rel='apple-touch-icon' sizes='114x114'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w120-h120-p-k-no-nu' rel='apple-touch-icon' sizes='120x120'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w144-h144-p-k-no-nu' rel='apple-touch-icon' sizes='144x144'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w152-h152-p-k-no-nu' rel='apple-touch-icon' sizes='152x152'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w180-h180-p-k-no-nu' rel='apple-touch-icon' sizes='180x180'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w16-h16-p-k-no-nu' rel='icon' sizes='16x16' type='image/png'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w32-h32-p-k-no-nu' rel='icon' sizes='32x32' type='image/png'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w96-h96-p-k-no-nu' rel='icon' sizes='96x96' type='image/png'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w192-h192-p-k-no-nu' rel='icon' sizes='192x192' type='image/png'/>
+<title>Lantro UI - Fast & Modern Blogger Template</title>
+<!-- BASIC SEO -->
+<meta name="description" content="Lantro UI is a fast, modern, and highly customizable Blogger template designed for performance and clean UI.">
+<meta name="keywords" content="Blogger template, fast blogger theme, SEO optimized template, responsive blogger theme, Lantro UI">
+<meta name="author" content="Lantro UI">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<!-- GOOGLE -->
+<meta name="googlebot" content="index, follow">
+<meta name="google" content="nositelinkssearchbox">
+<!-- OPEN GRAPH (Facebook / WhatsApp / LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lantro UI - Fast & Modern Blogger Template">
+<meta property="og:description" content="Modern, lightweight, and customizable Blogger template with high performance and SEO optimization.">
+<meta property="og:url" content="https://the-lantro-ui.blogspot.com/">
+<meta property="og:image" content="https://cdn.coshix.in/Images/lui-ss.webp">
+<meta property="og:site_name" content="Lantro UI">
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lantro UI - Fast & Modern Blogger Template">
+<meta name="twitter:description" content="Modern, lightweight, and customizable Blogger template with high performance.">
+<meta name="twitter:image" content="https://cdn.coshix.in/Images/lui-ss.webp">
+<!-- PERFORMANCE & FONT -->
+<script>window.lazy=window.lazy||new Promise(e=>{const t="IS_LAZIED",n="true",o=["scroll","click"],i=["keydown","mouseover","touchmove","touchstart"],r=o.concat(i);function a(){try{return localStorage.getItem(t)===n}catch(e){return!0}}function l(e=!0){try{e?localStorage.setItem(t,n):localStorage.removeItem(t)}catch(e){}}function d(t){l(!0),e({type:t.type.toLowerCase()}),r.forEach(e=>window.removeEventListener(e,d))}if(a())e({type:"local"});else if(0!==document.documentElement.scrollTop||document.body&&0!==document.body.scrollTop)d({type:"scroll"});else{const e=()=>{window.removeEventListener("load",e),i.forEach(e=>window.addEventListener(e,d))};window.addEventListener("load",e),o.forEach(e=>window.addEventListener(e,d))}});</script>
+<script>lazy.then(function(){var l1=document.createElement("link");l1.rel="preconnect";l1.href="https://fonts.googleapis.com";document.head.appendChild(l1);var l2=document.createElement("link");l2.rel="preconnect";l2.href="https://fonts.gstatic.com";l2.crossOrigin="anonymous";document.head.appendChild(l2);var s=document.createElement("link");s.rel="stylesheet";s.href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap";document.head.appendChild(s)});</script>
+
+<style>
+:root{
+--bg:#fff;
+--text:#111;
+--muted:#6b7280;
+--accent:#6c5ce7;
+--card:#ffffff;
+--border:#e6e6e6;
+}
+body{
+margin:0;
+font-family:Inter,sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.7;
+}
+
+/* CONTAINER */
+.container{
+max-width:850px;
+margin:auto;
+padding:60px 20px;
+}
+
+/* CARD STYLE */
+.card{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:12px;
+padding:30px;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+/* HEADINGS */
+h1{
+font-size:32px;
+margin-bottom:10px;
+}
+h2{
+margin-top:30px;
+font-size:18px;
+}
+p{
+font-size:14px;
+color:var(--muted);
+}
+
+/* HEADER */
+.header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:25px;
+}
+
+/* HOME BUTTON */
+.home-btn{
+display:flex;
+align-items:center;
+gap:6px;
+text-decoration:none;
+color:var(--text);
+font-size:13px;
+padding:6px 10px;
+border:1px solid var(--border);
+border-radius:8px;
+transition:.2s;
+}
+.home-btn svg{
+width:16px;
+height:16px;
+stroke:var(--text);
+stroke-width:1.5;
+fill:none;
+}
+.home-btn:hover{
+background:var(--accent);
+color:#fff;
+border-color:var(--accent);
+}
+.home-btn:hover svg{
+stroke:#fff;
+}
+
+/* FOOTER */
+.footer{
+margin-top:30px;
+font-size:12px;
+color:var(--muted);
+text-align:center;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+.container{padding:40px 15px}
+.card{padding:20px}
+h1{font-size:24px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<div class="card">
+
+<!-- HEADER -->
+<div class="header">
+<h1>Privacy Policy</h1>
+
+<a href="/" class="home-btn">
+<svg viewBox="0 0 24 24">
+<path d="M3 10.5L12 3l9 7.5"/>
+<path d="M5 10v10h14V10"/>
+</svg>
+Home
+</a>
+
+</div>
+
+<p><strong>Last updated:</strong> 2026</p>
+
+<h2>Information We Collect</h2>
+<p>We may collect basic information such as browser type, device information, pages visited, and usage data to improve the performance and experience of our website.</p>
+
+<h2>Cookies</h2>
+<p>This website uses cookies to enhance user experience, remember preferences, and analyze traffic. By using this site, you agree to the use of cookies.</p>
+
+<h2>Third-Party Services</h2>
+<p>We may use third-party services such as analytics tools and advertising networks. These services may collect, use, and process data according to their own privacy policies.</p>
+
+<h2>Data Usage</h2>
+<p>All collected data is used strictly for improving website performance, functionality, and user experience. We do not sell, trade, or misuse personal information.</p>
+
+<h2>External Links</h2>
+<p>Our website may contain links to external sites. We are not responsible for the privacy practices or content of those websites.</p>
+
+<h2>User Consent</h2>
+<p>By using our website, you consent to our Privacy Policy and agree to its terms.</p>
+
+<h2>Updates</h2>
+<p>We may update this Privacy Policy from time to time. Changes will be reflected on this page with an updated date.</p>
+
+<h2>Contact</h2>
+<p>If you have any questions about this Privacy Policy, you can contact us through our website.</p>
+
+<div class="footer">
+© 2026 Lantro UI • All rights reserved
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
