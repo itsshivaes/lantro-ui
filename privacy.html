@@ -47,7 +47,7 @@
 <!-- PERFORMANCE & FONT -->
 <script>window.lazy=window.lazy||new Promise(e=>{const t="IS_LAZIED",n="true",o=["scroll","click"],i=["keydown","mouseover","touchmove","touchstart"],r=o.concat(i);function a(){try{return localStorage.getItem(t)===n}catch(e){return!0}}function l(e=!0){try{e?localStorage.setItem(t,n):localStorage.removeItem(t)}catch(e){}}function d(t){l(!0),e({type:t.type.toLowerCase()}),r.forEach(e=>window.removeEventListener(e,d))}if(a())e({type:"local"});else if(0!==document.documentElement.scrollTop||document.body&&0!==document.body.scrollTop)d({type:"scroll"});else{const e=()=>{window.removeEventListener("load",e),i.forEach(e=>window.addEventListener(e,d))};window.addEventListener("load",e),o.forEach(e=>window.addEventListener(e,d))}});</script>
 <script>lazy.then(function(){var l1=document.createElement("link");l1.rel="preconnect";l1.href="https://fonts.googleapis.com";document.head.appendChild(l1);var l2=document.createElement("link");l2.rel="preconnect";l2.href="https://fonts.gstatic.com";l2.crossOrigin="anonymous";document.head.appendChild(l2);var s=document.createElement("link");s.rel="stylesheet";s.href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap";document.head.appendChild(s)});</script>
-
+<!-- STYLES -->
 <style>
 :root{
 --bg:#fff;
@@ -57,12 +57,23 @@
 --card:#ffffff;
 --border:#e6e6e6;
 }
+
+/* DARK MODE */
+.dark{
+--bg:#0f0f11;
+--text:#fff;
+--muted:#9ca3af;
+--card:#1a1a1d;
+--border:rgba(255,255,255,.1);
+}
+
 body{
 margin:0;
 font-family:Inter,sans-serif;
 background:var(--bg);
 color:var(--text);
 line-height:1.7;
+transition:.3s;
 }
 
 /* CONTAINER */
@@ -72,27 +83,13 @@ margin:auto;
 padding:60px 20px;
 }
 
-/* CARD STYLE */
+/* CARD */
 .card{
 background:var(--card);
 border:1px solid var(--border);
 border-radius:12px;
 padding:30px;
-box-shadow:0 10px 30px rgba(0,0,0,.05);
-}
-
-/* HEADINGS */
-h1{
-font-size:32px;
-margin-bottom:10px;
-}
-h2{
-margin-top:30px;
-font-size:18px;
-}
-p{
-font-size:14px;
-color:var(--muted);
+box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
 /* HEADER */
@@ -101,9 +98,22 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 margin-bottom:25px;
+gap:10px;
+flex-wrap:wrap;
 }
 
-/* HOME BUTTON */
+/* TEXT */
+h1{font-size:32px;margin-bottom:10px}
+h2{margin-top:30px;font-size:18px}
+p{font-size:14px;color:var(--muted)}
+
+/* BUTTON GROUP */
+.actions{
+display:flex;
+gap:10px;
+}
+
+/* HOME BTN */
 .home-btn{
 display:flex;
 align-items:center;
@@ -117,8 +127,7 @@ border-radius:8px;
 transition:.2s;
 }
 .home-btn svg{
-width:16px;
-height:16px;
+width:16px;height:16px;
 stroke:var(--text);
 stroke-width:1.5;
 fill:none;
@@ -128,8 +137,23 @@ background:var(--accent);
 color:#fff;
 border-color:var(--accent);
 }
-.home-btn:hover svg{
-stroke:#fff;
+.home-btn:hover svg{stroke:#fff}
+
+/* DARK TOGGLE */
+.toggle{
+cursor:pointer;
+border:1px solid var(--border);
+padding:6px 10px;
+border-radius:8px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+.toggle svg{
+width:16px;height:16px;
+stroke:var(--text);
+stroke-width:1.5;
+fill:none;
 }
 
 /* FOOTER */
@@ -158,6 +182,9 @@ h1{font-size:24px}
 <div class="header">
 <h1>Privacy Policy</h1>
 
+<div class="actions">
+
+<!-- HOME -->
 <a href="/" class="home-btn">
 <svg viewBox="0 0 24 24">
 <path d="M3 10.5L12 3l9 7.5"/>
@@ -166,6 +193,14 @@ h1{font-size:24px}
 Home
 </a>
 
+<!-- DARK MODE -->
+<div class="toggle" onclick="toggleTheme()">
+<svg viewBox="0 0 24 24">
+<path d="M21 12.79A9 9 0 1 1 11.21 3c0 0 0 0 0 0"/>
+</svg>
+</div>
+
+</div>
 </div>
 
 <p><strong>Last updated:</strong> 2026</p>
@@ -174,25 +209,25 @@ Home
 <p>We may collect basic information such as browser type, device information, pages visited, and usage data to improve the performance and experience of our website.</p>
 
 <h2>Cookies</h2>
-<p>This website uses cookies to enhance user experience, remember preferences, and analyze traffic. By using this site, you agree to the use of cookies.</p>
+<p>This website uses cookies to enhance user experience, remember preferences, and analyze traffic.</p>
 
 <h2>Third-Party Services</h2>
-<p>We may use third-party services such as analytics tools and advertising networks. These services may collect, use, and process data according to their own privacy policies.</p>
+<p>We may use third-party services such as analytics tools and advertising networks.</p>
 
 <h2>Data Usage</h2>
-<p>All collected data is used strictly for improving website performance, functionality, and user experience. We do not sell, trade, or misuse personal information.</p>
+<p>All collected data is used only to improve website functionality and experience.</p>
 
 <h2>External Links</h2>
-<p>Our website may contain links to external sites. We are not responsible for the privacy practices or content of those websites.</p>
+<p>We are not responsible for third-party websites linked from our platform.</p>
 
 <h2>User Consent</h2>
-<p>By using our website, you consent to our Privacy Policy and agree to its terms.</p>
+<p>By using our website, you agree to this Privacy Policy.</p>
 
 <h2>Updates</h2>
-<p>We may update this Privacy Policy from time to time. Changes will be reflected on this page with an updated date.</p>
+<p>We may update this policy anytime. Changes will appear here.</p>
 
 <h2>Contact</h2>
-<p>If you have any questions about this Privacy Policy, you can contact us through our website.</p>
+<p>Contact us via our website if needed.</p>
 
 <div class="footer">
 © 2026 Lantro UI • All rights reserved
@@ -200,6 +235,20 @@ Home
 
 </div>
 </div>
+
+<!-- DARK MODE JS -->
+<script>
+function toggleTheme(){
+document.body.classList.toggle("dark");
+localStorage.setItem("theme",
+document.body.classList.contains("dark")?"dark":"light");
+}
+(function(){
+if(localStorage.getItem("theme")==="dark"){
+document.body.classList.add("dark");
+}
+})();
+</script>
 
 </body>
 </html>
