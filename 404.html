@@ -44,7 +44,7 @@
 <!--[PERFORMANCE & FONT]-->
 <script>window.lazy=window.lazy||new Promise(e=>{const t="IS_LAZIED",n="true",o=["scroll","click"],i=["keydown","mouseover","touchmove","touchstart"],r=o.concat(i);function a(){try{return localStorage.getItem(t)===n}catch(e){return!0}}function l(e=!0){try{e?localStorage.setItem(t,n):localStorage.removeItem(t)}catch(e){}}function d(t){l(!0),e({type:t.type.toLowerCase()}),r.forEach(e=>window.removeEventListener(e,d))}if(a())e({type:"local"});else if(0!==document.documentElement.scrollTop||document.body&&0!==document.body.scrollTop)d({type:"scroll"});else{const e=()=>{window.removeEventListener("load",e),i.forEach(e=>window.addEventListener(e,d))};window.addEventListener("load",e),o.forEach(e=>window.addEventListener(e,d))}});</script>
 <script>lazy.then(function(){var l1=document.createElement("link");l1.rel="preconnect";l1.href="https://fonts.googleapis.com";document.head.appendChild(l1);var l2=document.createElement("link");l2.rel="preconnect";l2.href="https://fonts.gstatic.com";l2.crossOrigin="anonymous";document.head.appendChild(l2);var s=document.createElement("link");s.rel="stylesheet";s.href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap";document.head.appendChild(s)});</script>
-
+<!--[ PAGE STYLE ]-->
 <style>
 :root{--bg:#fff;--text:#111;--muted:#6b7280;--accent:#6c5ce7;--border:#e6e6e6}
 .dark{--bg:#0f0f11;--text:#fff;--muted:#9ca3af;--accent:#8b7cf6;--border:rgba(255,255,255,.1)}
@@ -78,8 +78,11 @@ h2{font-size:18px}
 
 <body>
 
+<!-- DARK MODE BUTTON -->
 <button class="toggle" onclick="t()"><svg class="icon" viewBox="0 0 24 24"><path d="M2.03009 12.42C2.39009 17.57 6.76009 21.76 11.9901 21.99C15.6801 22.15 18.9801 20.43 20.9601 17.72C21.7801 16.61 21.3401 15.87 19.9701 16.12C19.3001 16.24 18.6101 16.29 17.8901 16.26C13.0001 16.06 9.00009 11.97 8.98009 7.13996C8.97009 5.83996 9.24009 4.60996 9.73009 3.48996C10.2701 2.24996 9.62009 1.65996 8.37009 2.18996C4.41009 3.85996 1.70009 7.84996 2.03009 12.42Z"></path></svg></button>
 
+<!-- MAIN WRAPPER -->
+  <main>
 <div class="wrap">
   <h1>4<span>0</span>4</h1>
   <h2>Page not found</h2>
@@ -91,6 +94,9 @@ h2{font-size:18px}
   </div>
 </div>
 
+  </main>
+
+<!-- DARK MODE JS -->
 <script>
 function t(){document.body.classList.toggle("dark");localStorage.setItem("theme",document.body.classList.contains("dark")?"dark":"light")}
 !function(){localStorage.getItem("theme")==="dark"&&document.body.classList.add("dark")}();
