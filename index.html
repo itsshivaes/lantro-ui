@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,7 +77,7 @@ body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);trans
 .mac-body img{width:100%;display:block}
 @media(max-width:900px){.hero-wrap{grid-template-columns:1fr}
 .hero-right{margin-top:30px}}
-.btn{padding:12px 22px;margin-right:5px;border-radius:30px;border:none;cursor:pointer;margin-top:25px}
+.btn{text-decoration:none;padding:12px 22px;margin-right:5px;border-radius:30px;border:none;cursor:pointer;margin-top:25px}
 .btn-primary{background:var(--accent);color:#fff}
 .showcase{padding:60px 8%;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
 .card{background:var(--card);border-radius:5px;border:1px solid var(--contentL);overflow:hidden;transition:.3s}
@@ -93,6 +94,46 @@ body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);trans
 .fcard h3{margin:8px 0;font-size:16px}
 .fcard p{font-size:13px;color:var(--muted)}
 .footer{text-align:center;padding:30px;color:var(--muted);border-top:3px dotted var(--contentL)}
+.pricing{padding:60px 10%;text-align:center;border-bottom:3px dotted var(--contentL)}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;max-width:800px;margin:auto}
+
+.price-card{
+  background:var(--card);
+  border:1px solid var(--contentL);
+  border-radius:5px;
+  padding:25px;
+  transition:.3s;
+  position:relative;
+}
+.pricing h2{margin-bottom:30px}
+.price-card:hover{transform:translateY(-6px)}
+
+.price-card h3{font-size:20px;margin-bottom:10px}
+.price{font-size:30px;font-weight:700;margin-bottom:20px;color:var(--accent)}
+
+.features-list{list-style:none;padding:0;margin-bottom:20px;text-align:left}
+.features-list li{font-size:14px;padding:6px 0;display:flex;align-items:center;gap:8px}
+
+.features-list li.ok::before{content:"✔";color:#22c55e;font-size:12px}
+.features-list li.no{color:var(--muted);text-decoration:line-through}
+.features-list li.no::before{content:"✖";color:#ef4444;font-size:12px}
+
+.btn-outline{border:1px solid var(--contentL);color:var(--text)}
+.price-card.pro{
+  border:2px solid var(--accent);
+  transform:scale(1.03);
+}
+.badge-pro{
+  position:absolute;
+  top:-10px;
+  right:15px;
+  background:var(--accent);
+  color:#fff;
+  font-size:12px;
+  padding:4px 10px;
+  border-radius:20px;
+}
+.shots{padding:60px 8%;border-bottom:3px dotted var(--contentL)}.shots h2{margin-bottom:30px}.shots-wrap{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}.shots-wrap::-webkit-scrollbar{display:none}.shots-wrap{scrollbar-width:none}.mac-shot{min-width:320px;max-width:420px;flex:0 0 auto;background:var(--card);border:1px solid var(--contentL);border-radius:12px;overflow:hidden;scroll-snap-align:start;box-shadow:0 20px 40px rgba(0,0,0,.1);transition:.3s}.mac-shot:hover{transform:translateY(-6px)}.mac-bar{display:flex;gap:8px;padding:10px;border-bottom:1px solid var(--contentL)}.dot{width:10px;height:10px;border-radius:50%}.red{background:#ff5f57}.yellow{background:#febc2e}.green{background:#28c840}.mac-body img{width:100%;display:block;height:280px}@media(max-width:600px){.mac-shot{min-width:85%}}
 @media (max-width: 580px) {
   .logo { flex-wrap: wrap; justify-content: center; }
   .version-badge { margin-left: 0; }
@@ -179,7 +220,7 @@ body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);trans
     <h1>Get <span>fast</span> Blogger UI</h1>
     <p>Modern, lightweight, and customizable Blogger template.</p>
 
-    <a href="/theme-lantro-ui-2026-v2.0.zip"><button class="btn btn-primary">Download</button></a>
+    <a href="#pricing"><button class="btn btn-primary">Download</button></a>
     <a href="https://the-lantro-ui.blogspot.com">
       <button class="btn">Live Demo</button>
     </a>
@@ -201,6 +242,105 @@ body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);trans
     </div>
   </div>
 
+</div>
+
+<!-- PRICING -->
+ <div class="pricing">
+  <h2 id="pricing">Choose Your Plan</h2>
+
+  <div class="price-grid">
+
+    <!-- FREE -->
+    <div class="price-card">
+      <h3>Free</h3>
+      <p class="price">Free</p>
+
+      <ul class="features-list">
+        <li class="ok">Basic UI & Layout</li>
+        <li class="ok">Responsive Design</li>
+        <li class="ok">SEO Optimized</li>
+
+        <li class="no">Bookmark Feature</li>
+        <li class="no">Accent Color Changer</li>
+        <li class="no">Categorized Posts</li>
+        <li class="no">Background Style Changer</li>
+        <li class="no">AD Blocker Prevention</li>
+        <li class="no">Like / Dislike System</li>
+        <li class="no">No Footer Credit</li>
+      </ul>
+
+      <a href="/theme-lantro-ui-2026-v2.0-free.zip"  class="btn btn-primary">Download</a>
+    </div>
+
+    <!-- PREMIUM -->
+    <div class="price-card pro">
+      <span class="badge-pro">Best Value</span>
+
+      <h3>Premium</h3>
+      <p class="price">$6 / ₹299</p>
+
+      <ul class="features-list">
+        <li class="ok">Basic UI & Layout</li>
+        <li class="ok">Responsive Design</li>
+        <li class="ok">SEO Optimized</li>
+        <li class="ok">Bookmark Feature</li>
+        <li class="ok">Accent Color Changer</li>
+        <li class="ok">Categorized Posts</li>
+        <li class="ok">Background Style Changer</li>
+         <li class="ok">AD Blocker Prevention</li>
+        <li class="ok">Like / Dislike System</li>
+        <li class="ok">No Footer Credit</li>
+      </ul>
+
+      <a href='https://t.me/its_mr_inno' class="btn btn-primary">Buy Now</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- SCREENSHOTS -->
+ <div class="shots">
+  <h2>PERFORMANCE —</h2>
+
+  <div class="shots-wrap">
+
+    <!-- Screenshot 1 -->
+    <div class="mac-shot">
+      <div class="mac-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <div class="mac-body">
+        <img src="https://cdn.coshix.in/Images/pagespeed-mobile.webp" alt="PageSpeed mobile">
+      </div>
+    </div>
+
+    <!-- Screenshot 2 -->
+    <div class="mac-shot">
+      <div class="mac-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <div class="mac-body">
+        <img src="https://cdn.coshix.in/Images/pagespeed-desktop.webp" alt="Pagespeed desktop">
+      </div>
+    </div>
+
+    <!-- Screenshot 3 -->
+    <div class="mac-shot">
+      <div class="mac-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <div class="mac-body">
+        <img src="https://cdn.coshix.in/Images/rich-result.webp" alt="Rich Result">
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <!-- FEATURES -->
