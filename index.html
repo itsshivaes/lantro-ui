@@ -439,8 +439,23 @@ body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);trans
 <div class="footer">© 2026 Lantro UI</div>
 
 <!-- LAZY ANALYTICS -->
-<script>lazy.then(function(){var s=document.createElement(&quot;script&quot;);s.src=&quot;https://www.googletagmanager.com/gtag/js?id=G-YWH7627PXH&quot;,s.async=!0,document.head.appendChild(s),window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag(&quot;js&quot;,new Date),gtag(&quot;config&quot;,&quot;G-YWH7627PXH&quot;,{send_page_view:!1}),setTimeout(function(){gtag(&quot;event&quot;,&quot;page_view&quot;)},2000)})</script>
+<script>lazy.then(function(){
+  var s = document.createElement("script");
+  s.src = "https://www.googletagmanager.com/gtag/js?id=G-YWH7627PXH";
+  s.async = true;
+  document.head.appendChild(s);
 
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){ dataLayer.push(arguments); }
+
+  gtag("js", new Date());
+  gtag("config", "G-YWH7627PXH", { send_page_view: false });
+
+  setTimeout(function(){
+    gtag("event", "page_view");
+  }, 2000);
+});</script>
 <!-- DARK MODE AND MENU JS -->
 <script>
 function t(){document.body.classList.toggle("dark");localStorage.setItem("theme",document.body.classList.contains("dark")?"dark":"light")}
