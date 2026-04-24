@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lantro UI Demo</title>
+
+<!-- FAVICON -->
+<meta content='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w144-h144-p-k-no-nu' name='msapplication-TileImage'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w57-h57-p-k-no-nu' rel='apple-touch-icon' sizes='57x57'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w60-h60-p-k-no-nu' rel='apple-touch-icon' sizes='60x60'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w72-h72-p-k-no-nu' rel='apple-touch-icon' sizes='72x72'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w76-h76-p-k-no-nu' rel='apple-touch-icon' sizes='76x76'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w114-h114-p-k-no-nu' rel='apple-touch-icon' sizes='114x114'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w120-h120-p-k-no-nu' rel='apple-touch-icon' sizes='120x120'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w144-h144-p-k-no-nu' rel='apple-touch-icon' sizes='144x144'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w152-h152-p-k-no-nu' rel='apple-touch-icon' sizes='152x152'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w180-h180-p-k-no-nu' rel='apple-touch-icon' sizes='180x180'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w16-h16-p-k-no-nu' rel='icon' sizes='16x16' type='image/png'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w32-h32-p-k-no-nu' rel='icon' sizes='32x32' type='image/png'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w96-h96-p-k-no-nu' rel='icon' sizes='96x96' type='image/png'/>
+<link href='https://blogger.googleusercontent.com/img/a/AVvXsEg1fhdNH2BNQhxc92u5tQyX3W6gNhQ65JSuSs3na3YPPxU0PzNpLShyW10uk86lzqQNR0DTTkKqT5l56X4EzuESV-pw7vAUEe-t0lx6U-1i1y7b0FvyJfhbdBXTuQ0F1inZjYJokEwckor8ICQUY_NV6mIdXD-tcrQiL4pAdNPS1NoktquHPX22oQw3vFJ_=w192-h192-p-k-no-nu' rel='icon' sizes='192x192' type='image/png'/>
+<!-- PERFORMANCE & FONT -->
+<script>window.lazy=window.lazy||new Promise(e=>{const t="IS_LAZIED",n="true",o=["scroll","click"],i=["keydown","mouseover","touchmove","touchstart"],r=o.concat(i);function a(){try{return localStorage.getItem(t)===n}catch(e){return!0}}function l(e=!0){try{e?localStorage.setItem(t,n):localStorage.removeItem(t)}catch(e){}}function d(t){l(!0),e({type:t.type.toLowerCase()}),r.forEach(e=>window.removeEventListener(e,d))}if(a())e({type:"local"});else if(0!==document.documentElement.scrollTop||document.body&&0!==document.body.scrollTop)d({type:"scroll"});else{const e=()=>{window.removeEventListener("load",e),i.forEach(e=>window.addEventListener(e,d))};window.addEventListener("load",e),o.forEach(e=>window.addEventListener(e,d))}});</script>
+<script>lazy.then(function(){var l1=document.createElement("link");l1.rel="preconnect";l1.href="https://fonts.googleapis.com";document.head.appendChild(l1);var l2=document.createElement("link");l2.rel="preconnect";l2.href="https://fonts.gstatic.com";l2.crossOrigin="anonymous";document.head.appendChild(l2);var s=document.createElement("link");s.rel="stylesheet";s.href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap";document.head.appendChild(s)});</script>
+<style>
+:root{
+--bg:#fff;
+--text:#111;
+--muted:#6b7280;
+--accent:#6c5ce7;
+--card:#fff;
+--border:#e5e7eb
+}
+.dark{
+--bg:#0f0f11;
+--text:#fff;
+--muted:#9ca3af;
+--accent:#8b7cf6;
+--card:#1a1a1d;
+--border:rgba(255,255,255,.1)
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);transition:.3s}
+
+/* NAV */
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 6%;
+border-bottom:1px solid var(--border)
+}
+.logo{font-weight:600;font-size:20px}
+
+/* DARK TOGGLE */
+.toggle{
+cursor:pointer;
+padding:8px;
+border-radius:8px;
+display:flex;
+align-items:center;
+justify-content:center
+}
+.toggle svg{
+width:20px;
+height:20px;
+stroke:var(--text);
+fill:none;
+stroke-width:1;
+stroke-linecap:round
+}
+
+/* HERO */
+.hero{
+text-align:center;
+padding:60px 20px
+}
+.hero h1{font-size:34px;margin-bottom:10px}
+.hero p{color:var(--muted)}
+
+/* GRID */
+.demo-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+padding:50px 8%
+}
+
+.card{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:5px;
+overflow:hidden;
+transition:.3s
+}
+.card:hover{transform:translateY(-6px)}
+
+/* IMAGE */
+.preview{
+height:220px;
+overflow:hidden
+}
+.preview img{
+width:100%;
+height:100%;
+object-fit:cover
+}
+
+/* CONTENT */
+.card-body{
+padding:20px
+}
+.card-body h3{margin-bottom:8px}
+.card-body p{font-size:14px;color:var(--muted);margin-bottom:15px}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+padding:10px 18px;
+border-radius:25px;
+text-decoration:none;
+font-size:14px;
+border:1px solid var(--border);
+color:var(--text);
+transition:.2s
+}
+.btn-primary{
+background:var(--accent);
+color:#fff;
+border:none
+}
+.btn:hover{opacity:.9}
+
+/* FOOTER */
+.footer{
+text-align:center;
+padding:30px;
+color:var(--muted);
+border-top:1px solid var(--border)
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="logo">Lantro UI</div>
+
+  <div class="toggle" onclick="t()">
+    <svg class="icon" viewBox="0 0 24 24">
+      <path d="M2.03009 12.42C2.39009 17.57 6.76009 21.76 11.9901 21.99C15.6801 22.15 18.9801 20.43 20.9601 17.72C21.7801 16.61 21.3401 15.87 19.9701 16.12C19.3001 16.24 18.6101 16.29 17.8901 16.26C13.0001 16.06 9.00009 11.97 8.98009 7.13996C8.97009 5.83996 9.24009 4.60996 9.73009 3.48996C10.2701 2.24996 9.62009 1.65996 8.37009 2.18996C4.41009 3.85996 1.70009 7.84996 2.03009 12.42Z"/>
+    </svg>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Choose Demo Version</h1>
+  <p>Preview before downloading</p>
+</div>
+
+<!-- DEMO -->
+<div class="demo-grid">
+
+  <!-- FREE -->
+  <div class="card">
+    <div class="preview">
+      <img src="https://cdn.coshix.in/Images/lui-ss.webp" alt="Free demo">
+    </div>
+    <div class="card-body">
+      <h3>Free Version</h3>
+      <p>Basic features • Limited customization</p>
+
+      <a href="https://lantro-ui-free.blogspot.com/" class="btn btn-primary">View Demo</a>
+    </div>
+  </div>
+
+  <!-- PREMIUM -->
+  <div class="card">
+    <div class="preview">
+      <img src="https://cdn.coshix.in/Images/lui-ss.webp" alt="Premium demo">
+    </div>
+    <div class="card-body">
+      <h3>Premium Version</h3>
+      <p>All features unlocked • Full customization</p>
+
+      <a href="https://the-lantro-ui.blogspot.com" class="btn btn-primary">View Demo</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+© 2026 Lantro UI
+</div>
+
+<!-- DARK MODE -->
+<script>
+function t(){
+ document.body.classList.toggle("dark");
+ localStorage.setItem("theme",document.body.classList.contains("dark")?"dark":"light")
+}
+if(localStorage.getItem("theme")==="dark"){
+ document.body.classList.add("dark")
+}
+</script>
+
+</body>
+</html>
