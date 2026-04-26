@@ -336,8 +336,8 @@ body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);trans
 
       <h3>Premium</h3>
       <div class="price">
-  <span class="old-price" id="oldPrice">₹499 / $8</span>
-  <span id="livePrice">₹349 / $6</span>
+  <p id="oldPrice" class="old-price">₹499 / $8</p>
+<p id="premiumPrice">₹349 / $6</p>
 </div>
 
       <ul class="features-list">
@@ -538,7 +538,7 @@ const nav=document.getElementById("navLinks");function toggleMenu(){nav.classLis
 
 <!-- OFFER JS -->
 <script>
-!function(){const e=new Date("2026-05-10T23:59:59Z").getTime(),t=document.getElementById("offerOverlay"),n=document.getElementById("offerDays"),o=document.getElementById("offerHours"),r=document.getElementById("offerMins"),a=document.getElementById("premiumPrice"),i=document.getElementById("launchBadge"),c=document.getElementById("oldPrice"),s=document.getElementById("offerClose"),u=document.body;function d(){let d=e-Date.now();if(d<=0)return t&&t.remove(),localStorage.removeItem("lantroOfferClosed"),a&&(a.innerHTML="<span>₹499 / $8</span>"),i&&i.remove(),void(c&&c.remove());n&&(n.textContent=Math.floor(d/864e5)),o&&(o.textContent=Math.floor(d%864e5/36e5)),r&&(r.textContent=Math.floor(d%36e5/6e4))}t&&Date.now()<e&&!localStorage.getItem("lantroOfferClosed")&&setTimeout(()=>t.classList.add("show"),700),d(),setInterval(d,1e3),s&&s.addEventListener("click",function(){t&&t.classList.remove("show"),localStorage.setItem("lantroOfferClosed","1")}),t&&t.addEventListener("click",e=>{e.target===t&&(t.classList.remove("show"),localStorage.setItem("lantroOfferClosed","1"))}),window.t=function(){u.classList.toggle("dark"),localStorage.setItem("theme",u.classList.contains("dark")?"dark":"light")},localStorage.getItem("theme")==="dark"&&u.classList.add("dark");const l=document.getElementById("navLinks");window.toggleMenu=function(){l&&l.classList.toggle("show")},l&&document.addEventListener("click",e=>{l.contains(e.target)||e.target.closest(".hamburger")||l.classList.remove("show")})}();
+!function(){const e=new Date("2026-05-10T23:59:59Z").getTime(),t=document.getElementById("offerOverlay"),n=document.getElementById("offerDays"),o=document.getElementById("offerHours"),r=document.getElementById("offerMins"),a=document.getElementById("premiumPrice"),i=document.getElementById("launchBadge"),c=document.getElementById("oldPrice"),s=document.getElementById("offerClose"),u=document.body;function d(){let d=e-Date.now();if(d<=0)return t&&t.remove(),a&&a.remove(),c&&(c.classList.remove("old-price"),c.removeAttribute("style"),c.style.textDecoration="none",c.style.opacity="1",c.style.fontSize="32px",c.style.fontWeight="700",c.style.color="var(--accent)",c.innerHTML="₹499 / $8"),i&&(i.innerHTML="Premium"),void 0;n&&(n.textContent=Math.floor(d/864e5)),o&&(o.textContent=Math.floor(d%864e5/36e5)),r&&(r.textContent=Math.floor(d%36e5/6e4))}t&&Date.now()<e&&!localStorage.getItem("lantroOfferClosed")&&setTimeout(()=>t.classList.add("show"),700),d(),setInterval(d,1e3),s&&s.addEventListener("click",function(){t&&t.classList.remove("show"),localStorage.setItem("lantroOfferClosed","1")}),t&&t.addEventListener("click",e=>{e.target===t&&(t.classList.remove("show"),localStorage.setItem("lantroOfferClosed","1"))}),window.t=function(){u.classList.toggle("dark"),localStorage.setItem("theme",u.classList.contains("dark")?"dark":"light")},localStorage.getItem("theme")==="dark"&&u.classList.add("dark")}();
 </script>
 
 </body>
