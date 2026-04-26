@@ -91,16 +91,46 @@ body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);trans
 .mac-body img{width:100%;display:block}
 .old-price{text-decoration:line-through;display:block;font-size:16px;color:var(--muted);margin-bottom:6px}
 #livePrice{display:block}
-#offerPop{position:fixed;left:18px;right:18px;bottom:20px;max-width:420px;margin:auto;background:var(--card);border:1px solid var(--contentL);box-shadow:0 10px 40px rgba(0,0,0,.12);padding:22px;border-radius:18px;z-index:9999}
-#offerPop button{position:absolute;right:12px;top:12px;border:0;background:none;font-size:22px;cursor:pointer;color:var(--text)}
-.offer-title{font-size:20px;font-weight:700;margin-bottom:10px}
-.strike{text-decoration:line-through;opacity:.7;margin-top:8px}
-.timer{display:flex;gap:12px;margin:18px 0;justify-content:center}
-.timer div{padding:12px;min-width:74px;border:1px solid var(--contentL);border-radius:12px}
-.timer span{display:block;font-size:24px;font-weight:700;color:var(--accent)}
-.timer small{font-size:12px;color:var(--muted)}
-#offerPop a{display:block;text-align:center;background:var(--accent);color:#fff;padding:12px;border-radius:12px;text-decoration:none;font-weight:600}
-@media(max-width:520px){#offerPop{left:12px;right:12px;bottom:14px}.timer div{min-width:65px}}
+#offerOverlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:18px;background:rgba(0,0,0,.45);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:9999;opacity:0;visibility:hidden;transition:.35s ease}
+
+#offerOverlay.show{opacity:1;visibility:visible}
+
+#offerPop{position:relative;width:100%;max-width:560px;background:var(--card);border:1px solid var(--contentL);border-radius:24px;padding:30px;box-shadow:0 30px 70px rgba(0,0,0,.18);transform:translateY(30px) scale(.92);opacity:0;transition:.45s cubic-bezier(.22,1,.36,1)}
+
+#offerOverlay.show #offerPop{transform:translateY(0) scale(1);opacity:1}
+
+#offerPop button{position:absolute;top:16px;right:18px;background:none;border:0;padding:0;font-size:30px;line-height:1;cursor:pointer;color:var(--text)}
+
+.offer-title{margin:0 0 14px;font-size:34px;font-weight:700;line-height:1.2}
+
+.offer-desc{font-size:22px;line-height:1.5}
+
+.offer-desc b{font-weight:700}
+
+.strike{margin-top:8px;opacity:.65;text-decoration:line-through}
+
+.timer{display:flex;justify-content:center;gap:16px;margin:28px 0}
+
+.timer div{min-width:95px;padding:18px;border:1px solid var(--contentL);border-radius:18px;text-align:center}
+
+.timer span{display:block;font-size:42px;font-weight:700;color:var(--accent);line-height:1}
+
+.timer small{display:block;margin-top:8px;font-size:14px;color:var(--muted)}
+
+#offerPop a{display:block;text-align:center;text-decoration:none;background:var(--accent);color:#fff;padding:17px;border-radius:16px;font-size:20px;font-weight:600;transition:.3s}
+
+#offerPop a:hover{transform:translateY(-2px)}
+
+@media(max-width:600px){
+#offerOverlay{padding:14px}
+#offerPop{padding:24px;border-radius:20px}
+.offer-title{font-size:28px}
+.offer-desc{font-size:18px}
+.timer{gap:10px}
+.timer div{min-width:78px;padding:14px}
+.timer span{font-size:34px}
+#offerPop a{padding:15px;font-size:18px}
+}
 @media(max-width:900px){.hero-wrap{grid-template-columns:1fr}
 .hero-right{margin-top:30px}}
 .btn{text-decoration:none;padding:12px 22px;margin-right:5px;border-radius:30px;border:none;cursor:pointer;margin-top:25px}
@@ -510,7 +540,7 @@ const nav=document.getElementById("navLinks");function toggleMenu(){nav.classLis
 
 <!-- OFFER JS -->
 <script>
-!function(){if(localStorage.offerClosed)return offerPop.style.display="none";var e=new Date("May 10,2026 23:59:59").getTime();function t(){var t=e-Date.now();t<=0?(livePrice.innerHTML="499 / $8",oldPrice.style.display="none",popPrice.innerHTML="499 / $8",document.querySelector(".badge-pro").innerHTML="Premium",offerPop.style.display="none"):(days.innerHTML=Math.floor(t/864e5),hours.innerHTML=Math.floor(t%864e5/36e5),mins.innerHTML=Math.floor(t%36e5/6e4))}t(),setInterval(t,1e3),window.closeOffer=function(){offerPop.style.display="none",localStorage.offerClosed=1}}();
+!function(){const e=new Date("2026-05-10T23:59:59").getTime(),t=document.getElementById("offerOverlay"),n=document.getElementById("offerDays"),o=document.getElementById("offerHours"),r=document.getElementById("offerMins"),a=document.getElementById("premiumPrice"),i=document.getElementById("launchBadge"),c=document.getElementById("oldPrice"),l=document.getElementById("offerPop"),s=document.getElementById("offerClose");function d(){let d=e-Date.now();if(d<=0)return t&&(t.remove(),localStorage.removeItem("lantroOfferClosed")),a&&(a.innerHTML="<span>₹499 / $8</span>"),i&&i.remove(),void(c&&c.remove());let m=Math.floor(d/864e5),u=Math.floor(d%864e5/36e5),p=Math.floor(d%36e5/6e4);n&&(n.textContent=m),o&&(o.textContent=u),r&&(r.textContent=p)}Date.now()<e&&!localStorage.getItem("lantroOfferClosed")&&setTimeout(function(){t.classList.add("show")},700),d(),setInterval(d,1e3),s&&s.addEventListener("click",function(){t.classList.remove("show"),localStorage.setItem("lantroOfferClosed","1")}),t&&t.addEventListener("click",function(e){e.target===t&&(t.classList.remove("show"),localStorage.setItem("lantroOfferClosed","1"))});const m=document.body;window.t=function(){m.classList.toggle("dark"),localStorage.setItem("theme",m.classList.contains("dark")?"dark":"light")},localStorage.getItem("theme")==="dark"&&m.classList.add("dark");const u=document.getElementById("navLinks");window.toggleMenu=function(){u&&u.classList.toggle("show")},u&&document.addEventListener("click",function(e){u.contains(e.target)||e.target.closest(".hamburger")||u.classList.remove("show")})}();
 </script>
 
 </body>
