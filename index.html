@@ -89,6 +89,18 @@ body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);trans
 .yellow{background:#febc2e}
 .green{background:#28c840}
 .mac-body img{width:100%;display:block}
+.old-price{text-decoration:line-through;display:block;font-size:16px;color:var(--muted);margin-bottom:6px}
+#livePrice{display:block}
+#offerPop{position:fixed;left:18px;right:18px;bottom:20px;max-width:420px;margin:auto;background:var(--card);border:1px solid var(--contentL);box-shadow:0 10px 40px rgba(0,0,0,.12);padding:22px;border-radius:18px;z-index:9999}
+#offerPop button{position:absolute;right:12px;top:12px;border:0;background:none;font-size:22px;cursor:pointer;color:var(--text)}
+.offer-title{font-size:20px;font-weight:700;margin-bottom:10px}
+.strike{text-decoration:line-through;opacity:.7;margin-top:8px}
+.timer{display:flex;gap:12px;margin:18px 0;justify-content:center}
+.timer div{padding:12px;min-width:74px;border:1px solid var(--contentL);border-radius:12px}
+.timer span{display:block;font-size:24px;font-weight:700;color:var(--accent)}
+.timer small{font-size:12px;color:var(--muted)}
+#offerPop a{display:block;text-align:center;background:var(--accent);color:#fff;padding:12px;border-radius:12px;text-decoration:none;font-weight:600}
+@media(max-width:520px){#offerPop{left:12px;right:12px;bottom:14px}.timer div{min-width:65px}}
 @media(max-width:900px){.hero-wrap{grid-template-columns:1fr}
 .hero-right{margin-top:30px}}
 .btn{text-decoration:none;padding:12px 22px;margin-right:5px;border-radius:30px;border:none;cursor:pointer;margin-top:25px}
@@ -293,7 +305,10 @@ body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);trans
       <span class="badge-pro">Best Value</span>
 
       <h3>Premium</h3>
-      <p class="price">$6 / ₹349</p>
+      <div class="price">
+  <span class="old-price" id="oldPrice">₹499 / $8</span>
+  <span id="livePrice">₹349 / $6</span>
+</div>
 
       <ul class="features-list">
         <li class="ok">3 Blog License</li>
@@ -440,6 +455,34 @@ body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);trans
 <!-- CREDIT -->
 <div class="footer">© 2026 Lantro UI</div>
 
+<!-- OFFER POPUP -->
+<div id="offerPop">
+<button onclick="closeOffer()">×</button>
+
+<div class="offer-title">
+Launch Offer 🚀
+</div>
+
+<p>
+Buy <b>Lantro UI Premium</b> for
+<b id="popPrice">₹349 / $6</b>
+</p>
+
+<p class="strike">
+Regular:
+₹499 / $8
+</p>
+
+<div class="timer">
+<div><span id="days">00</span><small>Days</small></div>
+<div><span id="hours">00</span><small>Hours</small></div>
+<div><span id="mins">00</span><small>Mins</small></div>
+</div>
+
+<a href="https://t.me/its_mr_inno">Claim Offer</a>
+
+</div>
+
 <!-- LAZY ANALYTICS -->
 <script>lazy.then(function(){
   var s = document.createElement("script");
@@ -463,6 +506,11 @@ body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);trans
 function t(){document.body.classList.toggle("dark");localStorage.setItem("theme",document.body.classList.contains("dark")?"dark":"light")}
 !function(){localStorage.getItem("theme")==="dark"&&document.body.classList.add("dark")}();
 const nav=document.getElementById("navLinks");function toggleMenu(){nav.classList.toggle("show")}document.addEventListener("click",function(e){nav.contains(e.target)||e.target.closest(".hamburger")||nav.classList.remove("show")});nav.querySelectorAll("a").forEach(function(l){l.addEventListener("click",function(){nav.classList.remove("show")})});
+</script>
+
+<!-- OFFER JS -->
+<script>
+!function(){if(localStorage.offerClosed)return offerPop.style.display="none";var e=new Date("May 10,2026 23:59:59").getTime();function t(){var t=e-Date.now();t<=0?(livePrice.innerHTML="499 / $8",oldPrice.style.display="none",popPrice.innerHTML="499 / $8",document.querySelector(".badge-pro").innerHTML="Premium",offerPop.style.display="none"):(days.innerHTML=Math.floor(t/864e5),hours.innerHTML=Math.floor(t%864e5/36e5),mins.innerHTML=Math.floor(t%36e5/6e4))}t(),setInterval(t,1e3),window.closeOffer=function(){offerPop.style.display="none",localStorage.offerClosed=1}}();
 </script>
 
 </body>
