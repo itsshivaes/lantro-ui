@@ -486,31 +486,27 @@ body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);trans
 <div class="footer">© 2026 Lantro UI</div>
 
 <!-- OFFER POPUP -->
+<div id="offerOverlay">
 <div id="offerPop">
-<button onclick="closeOffer()">×</button>
+<button id="offerClose">&times;</button>
 
-<div class="offer-title">
-Launch Offer 🚀
-</div>
+<div class="offer-title">Launch Offer 🚀</div>
 
-<p>
-Buy <b>Lantro UI Premium</b> for
-<b id="popPrice">₹349 / $6</b>
+<p class="offer-desc">
+Buy <b>Lantro UI Premium</b> for <b>₹349 / $6</b>
 </p>
 
-<p class="strike">
-Regular:
-₹499 / $8
-</p>
+<div class="strike">Regular: ₹499 / $8</div>
 
 <div class="timer">
-<div><span id="days">00</span><small>Days</small></div>
-<div><span id="hours">00</span><small>Hours</small></div>
-<div><span id="mins">00</span><small>Mins</small></div>
+<div><span id="offerDays">14</span><small>Days</small></div>
+<div><span id="offerHours">00</span><small>Hours</small></div>
+<div><span id="offerMins">00</span><small>Mins</small></div>
 </div>
 
 <a href="https://t.me/its_mr_inno">Claim Offer</a>
 
+</div>
 </div>
 
 <!-- LAZY ANALYTICS -->
