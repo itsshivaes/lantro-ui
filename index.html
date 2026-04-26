@@ -403,7 +403,7 @@ body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);trans
 
       <h3>Premium</h3>
       <div class="price">
-  <p id="oldPrice" class="old-price js-old-price">₹499 / $8</p>
+  <p id="oldPrice" class="old-price js-old-price">₹499 / $9</p>
 <p id="premiumPrice" class="js-price">₹349 / $6</p>
 </div>
 
@@ -567,7 +567,7 @@ Buy <b>Lantro UI Premium</b> for
 
 <div class="strike">
 Regular:
-<span class="js-old-price">₹499 / US$8</span>
+<span class="js-old-price">₹499 / $9</span>
 </div>
 
 <div class="timer">
@@ -610,7 +610,7 @@ const nav=document.getElementById("navLinks");function toggleMenu(){nav.classLis
 
 <!-- OFFER JS -->
 <script>
-!function(){const e=new Date("2026-05-10T23:59:59Z").getTime(),t="₹349 • $6",n="₹499 • $8",o=document.getElementById("offerOverlay"),a=document.querySelectorAll("#offerDays,#launchDays"),r=document.querySelectorAll("#offerHours,#launchHours"),i=document.querySelectorAll("#offerMins,#launchMins"),c=document.getElementById("launchBadge"),s=document.getElementById("offerClose"),l=document.getElementById("buyBtn"),p=document.getElementById("buyPopup"),u=document.getElementById("closePopup"),d=document.querySelectorAll(".js-price"),m=document.querySelectorAll(".js-old-price"),y=document.body;function f(){let v=e-Date.now();if(v<=0)return o&&o.remove(),d.forEach(e=>e.innerHTML=n),m.forEach(e=>e.style.display="none"),c&&(c.innerHTML="Premium"),p&&p.querySelector(".countdown")&&(p.querySelector(".countdown").style.display="none"),p&&p.querySelector("small")&&(p.querySelector("small").innerHTML="Instant delivery after purchase."),void 0;d.forEach(e=>e.innerHTML=t),m.forEach(e=>(e.innerHTML=n,e.style.display="inline")),a.forEach(e=>e.textContent=Math.floor(v/864e5)),r.forEach(e=>e.textContent=Math.floor(v%864e5/36e5)),i.forEach(e=>e.textContent=Math.floor(v%36e5/6e4))}o&&Date.now()<e&&!localStorage.getItem("lantroOfferClosed")&&setTimeout(function(){o.classList.add("show")},700),f(),setInterval(f,1e3),s&&s.addEventListener("click",function(){o.classList.remove("show"),localStorage.setItem("lantroOfferClosed","1")}),o&&o.addEventListener("click",function(e){e.target===o&&(o.classList.remove("show"),localStorage.setItem("lantroOfferClosed","1"))}),l&&l.addEventListener("click",function(e){e.preventDefault(),p.classList.add("show")}),u&&u.addEventListener("click",function(){p.classList.remove("show")}),p&&p.addEventListener("click",function(e){e.target===p&&p.classList.remove("show")}),window.t=function(){y.classList.toggle("dark"),localStorage.setItem("theme",y.classList.contains("dark")?"dark":"light")},"dark"===localStorage.getItem("theme")&&y.classList.add("dark")}();
+!function(){const e=new Date("2026-05-10T23:59:59Z").getTime(),t="₹349 • $6",n="₹499 • $9",o=document.getElementById("offerOverlay"),a=document.querySelectorAll("#offerDays,#launchDays"),r=document.querySelectorAll("#offerHours,#launchHours"),i=document.querySelectorAll("#offerMins,#launchMins"),c=document.getElementById("launchBadge"),s=document.getElementById("offerClose"),l=document.getElementById("buyBtn"),p=document.getElementById("buyPopup"),u=document.getElementById("closePopup"),d=document.querySelectorAll(".js-price"),m=document.querySelectorAll(".js-old-price"),y=document.body;function f(){let v=e-Date.now();if(v<=0)return o&&o.remove(),d.forEach(e=>e.innerHTML=n),m.forEach(e=>e.style.display="none"),c&&(c.innerHTML="Premium"),p&&p.querySelector(".countdown")&&(p.querySelector(".countdown").style.display="none"),p&&p.querySelector("small")&&(p.querySelector("small").innerHTML="Instant delivery after purchase."),void 0;d.forEach(e=>e.innerHTML=t),m.forEach(e=>(e.innerHTML=n,e.style.display="inline")),a.forEach(e=>e.textContent=Math.floor(v/864e5)),r.forEach(e=>e.textContent=Math.floor(v%864e5/36e5)),i.forEach(e=>e.textContent=Math.floor(v%36e5/6e4))}o&&Date.now()<e&&!localStorage.getItem("lantroOfferClosed")&&setTimeout(function(){o.classList.add("show")},700),f(),setInterval(f,1e3),s&&s.addEventListener("click",function(){o.classList.remove("show"),localStorage.setItem("lantroOfferClosed","1")}),o&&o.addEventListener("click",function(e){e.target===o&&(o.classList.remove("show"),localStorage.setItem("lantroOfferClosed","1"))}),l&&l.addEventListener("click",function(e){e.preventDefault(),p.classList.add("show")}),u&&u.addEventListener("click",function(){p.classList.remove("show")}),p&&p.addEventListener("click",function(e){e.target===p&&p.classList.remove("show")}),window.t=function(){y.classList.toggle("dark"),localStorage.setItem("theme",y.classList.contains("dark")?"dark":"light")},"dark"===localStorage.getItem("theme")&&y.classList.add("dark")}();
 </script>
 
 </body>
